@@ -1,0 +1,66 @@
+ReadMe.txt
+
+                                         
+                                       Mutable Priority Queue
+								   
+								   
+Description:
+----------- 
+This program will build a Binary Heap from an initial collections of items using a file with a complete path or directly from user entries 
+using command line window.While building the Binary Heap - Using insert()-, the program will save each node location into
+a hash table -a quadratic linear probing is used for hashing nodes locations.
+The Hash Table is updated on every insertion , deletion , increasekey ,and  decreasekey operations.
+
+Time Complexity Analysis:
+-----------------------
+Building the Heap :insertion for one item is O(1) on average and O(log N) for worst case.For N items, O(N) in average and O(N log N) for worst case.
+Finding a Node   : Because we use a hash table to store nodes locations, it will take a constant time O(1) to find one node,making the operation cheap.
+                   As a result, other operations that use findlocation() will be cheap as well.
+
+ 
+Important Functions :
+-------------------
+******************PUBLIC OPERATIONS*********************
+ void insert( x )                    --> Insert x ( a node ) into the heap
+ deleteMin( minItem )                --> Remove (and optionally return) smallest item
+ Comparable findMin( )               --> Return smallest item
+ bool isEmpty( )                     --> Return true if empty; else false
+ void makeEmpty( )                   --> Remove all items 
+ void increaseKey(delta,key)         --> Increases delta value then percolate down 
+ void decreaseKey(delta,key)         --> Decreases delta value then percolate up
+ void removeKey(key)                 --> Assigning a minimum key value, Percolate up till root then delete
+
+Files Included :
+---------------
+1- main.cpp
+2- BinaryHeap.h
+3- QuadraticProbing.h
+4- QuadraticProbing.cpp
+5- CMakeLists.txt
+7- ReadMe.txt
+
+Language Used: c++ 
+------------- 
+ 
+ 
+Compiling Instructions:
+----------------------
+                      	#cmake CMakeLists.txt
+			            make
+Running Instructions: 
+--------------------- 
+From a file containing data: Redirect the input file  as follows  ./335_4 < input.txt
+From command line window   : after make file is run, input all the data needed to build the binary heap then type "end" and press enter key.
+                             to remove some data; type the all the data needed to be removed then type " end " and press enter key.
+						   
+Known Bugs:
+----------   None; please let us know if you find any issues. 
+Contacts:
+--------
+Hani Aboudeshisha              Hani.usa.nyc@gmail.com
+Grigoriy Zhenien	           gregoery.zhenin@gmail.com 
+Daniel Fialkouvsky             dafialkov@hunter.cuny.edu
+
+
+
+
